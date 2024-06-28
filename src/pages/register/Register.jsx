@@ -1,75 +1,72 @@
-import { useState } from "react";
-import { Button, Card, InputGroup, Form } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import React from "react";
+import { Card, Form, InputGroup, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
-const Register = ({ showToast }) => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const navigate = useNavigate();
+class Register extends React.Component {
 
-  const handleRegister = () => {
-    console.log("Registering with details:", { firstName, lastName, email, phone });
-    showToast("Successfully registered!");
-    navigate("/login");
-  };
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: "",
+            fName: "",
+            timer: 0
+        };
+    }
 
-  return (
-    <Card style={{ width: '25rem', margin: 'auto', marginTop: '2rem' }}>
-      <Card.Body>
-        <Card.Title>Register</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Enter Your Details</Card.Subtitle>
-        <Form>
-          <Form.Group className="mb-3" controlId="registerForm.firstName">
-            <Form.Label>First Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="First Name"
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="registerForm.lastName">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Last Name"
-              onChange={(e) => setLastName(e.target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="registerForm.email">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="duttasudipto11@gmail.com"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Form.Group>
-          {/* <Form.Group className="mb-3" controlId="registerForm.phone"> */}
-            <Form.Label>Phone</Form.Label>
-            <InputGroup className="mb-3">
-            <InputGroup.Text className="std">+91</InputGroup.Text>
-            <Form.Control
-              type="text"
-              placeholder="7449550732"
-              onChange={(e) => setPhone(e.target.value)}
-            />
-            </InputGroup>
-          {/* </Form.Group> */}
-          <Button variant="primary" onClick={handleRegister}>
-            Register
-          </Button>
-        </Form>
-        <Card.Text>Already have an account? <Link to="/login">Login</Link></Card.Text>
-      </Card.Body>
-    </Card>
-  );
-};
+    componentDidMount() {
+        console.log("First time...");
+        // setInterval(() => {
+        //     this.setState((currentValue) => {
+        //         return { timer: currentValue.timer + 1 }
+        //     })
+        // }, 1000);
+    }
 
-Register.propTypes = {
-  showToast: PropTypes.func.isRequired,
-  setRegistrationDone: PropTypes.func.isRequired,
-};
+    componentDidUpdate() {
+        console.log("After update..");
+    }
+
+    componentWillUnmount() {
+        console.log("Bye register...");
+    }
+
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+
+
+
+    render() {
+        // console.log("render colling...");
+        return <Card style={{ width: '25rem' }}>
+            <Card.Body>
+                <Card.Title>Register</Card.Title><span>{this.state.timer}</span>
+                <Card.Subtitle className="mb-2 text-muted">Enter Your Details</Card.Subtitle>
+                <Form>
+                    <Form.Group className="mb-3" controlId="registerForm.fname">
+                        <Form.Label>First Name</Form.Label>
+                        <Form.Control type="text" placeholder="Ramen" onChange={this.handleChange} value={this.state.fName} name="fName" />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="registerForm.lname">
+                        <Form.Label>Last Name</Form.Label>
+                        <Form.Control type="text" placeholder="Kundu" onChange={this.handleChange} name="lName" />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="registerForm.email">
+                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="email" placeholder="name@example.com" onChange={this.handleChange} name="email" />
+                    </Form.Group>
+                    <Form.Label>Phone</Form.Label>
+                    <InputGroup className="mb-3">
+                        <InputGroup.Text>+91</InputGroup.Text>
+                        <Form.Control id="inlineFormInputGroup" placeholder="9812345670" onChange={this.handleChange} name="password" />
+                    </InputGroup>
+                    <Button variant="primary">Register</Button>
+                </Form>
+                <Card.Text>Already have an account? <Link to="/login">Login</Link></Card.Text>
+
+            </Card.Body>
+        </Card>
+    }
+}
 
 export default Register;
