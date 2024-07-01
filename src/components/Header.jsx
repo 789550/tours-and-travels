@@ -1,33 +1,20 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
-// import './App.css';
+import { Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <LinkContainer to="/">
-              <Nav.Link>Home</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/about">
-              <Nav.Link>About</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/login">
-              <Nav.Link>Login</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/register">
-              <Nav.Link>Register</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/dashboard">
-              <Nav.Link>Dashboard</Nav.Link>
-            </LinkContainer>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
+    <Navbar expand="lg" className="navbar">
+      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+          <Link to="/">Home &nbsp; </Link>
+          <Link to="/about">About &nbsp; </Link>
+          <Link to="/login">Login &nbsp; </Link>
+          <Link to="/register"> Register &nbsp; </Link>
+          <Link to="/dashboard"> Dashboard &nbsp; </Link>
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
   );
 };

@@ -1,15 +1,18 @@
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import storageHandler from "../../helper/storageHandler";
 
 const Dashboard = () => {
-  const { email } = useParams();
+  const [email, setEmail] = useState("");
 
+  useEffect(() => {
+    const data = storageHandler.getLocalData();
+    setEmail(data?.email);
+  }, []);
+
+  // return <h1>Dashboard {email}</h1>;
   return (
-    <div>
-      <h1>Dashboard</h1>
-      {/* {email && <p>Welcome, {decodeURIComponent(email)}</p>} */}
-      {email && <p>Welcome, {email}</p>}
-    </div>
-  );
+    <h1>Dashboard: <span style={{ fontSize: '22px' }}>{email}</span></h1>
+);
 };
 
 export default Dashboard;
