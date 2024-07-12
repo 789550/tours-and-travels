@@ -27,9 +27,6 @@ const Layout = () => {
     setUser(null);
     dispatch(logout());
     navigate("/login");
-     //if (!auth) {
-    //  navigate("/login");
-    // }
   };
 
   return (

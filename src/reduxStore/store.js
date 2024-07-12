@@ -8,5 +8,3 @@ export const store = configureStore({
     },
 })
 
-//formik is a renowned library used for form validation
-// redux er store ta components er sathe map hoy

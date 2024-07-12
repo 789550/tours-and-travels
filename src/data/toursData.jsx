@@ -109,3 +109,4 @@ const tours = [
 ];
 
 export default tours;
+//without redux
