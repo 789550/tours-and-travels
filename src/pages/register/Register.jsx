@@ -1,73 +1,78 @@
-import { useState } from "react";
-import { Button, Card, InputGroup, Form } from "react-bootstrap";
-import { useNavigate, Link } from "react-router-dom";
-import PropTypes from 'prop-types';
+import React from "react";
+import { Card, Form, InputGroup, Button } from 'react-bootstrap';
+import { Link, Navigate } from "react-router-dom";
+import { register } from "../../reduxStore/authSlice";
+import { connect } from "react-redux";
 
-const Register = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const navigate = useNavigate();
+class Register extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: "",
+            phone: "",
+            fName: "",
+            lName: "",
+            password: "",
+        };
+    }
 
-  const handleRegister = () => {
-    console.log("Registering with details:", { firstName, lastName, email, phone });
-    navigate("/login");
-  };
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value })
+    }
 
-  return (
-    <Card style={{ width: '25rem', margin: 'auto', marginTop: '2rem' }}>
-      <Card.Body>
-        <Card.Title>Register</Card.Title>
-        <Card.Subtitle className="mb-2 text-muted">Enter Your Details</Card.Subtitle>
-        <Form>
-          <Form.Group className="mb-3" controlId="registerForm.firstName">
-            <Form.Label>First Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="First Name"
-              onChange={(e) => setFirstName(e.target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="registerForm.lastName">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control
-              type="text"
-              placeholder="Last Name"
-              onChange={(e) => setLastName(e.target.value)}
-            />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="registerForm.email">
-            <Form.Label>Email</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="duttasudipto11@gmail.com"
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </Form.Group>
-          {/* <Form.Group className="mb-3" controlId="registerForm.phone"> */}
-            <Form.Label>Phone</Form.Label>
-            <InputGroup className="mb-3">
-            <InputGroup.Text className="std">+91</InputGroup.Text>
-            <Form.Control
-              type="text"
-              placeholder="7449550732"
-              onChange={(e) => setPhone(e.target.value)}
-            />
-            </InputGroup>
-          {/* </Form.Group> */}
-          <Button variant="primary" onClick={handleRegister}>
-            Register
-          </Button>
-        </Form>
-        <Card.Text>Already have an account? <Link to="/login">Login</Link></Card.Text>
-      </Card.Body>
-    </Card>
-  );
-};
+    handelSubmit = () => {
+        const newUser = {
+            fName: this.state.fName,
+            lName: this.state.lName,
+            phone: this.state.phone,
+            email: this.state.email,
+            password: this.state.password,
+        }
+        this.props.register(newUser);
+    }
 
-Register.propTypes = {
-  setRegistrationDone: PropTypes.func,
-};
+    render() {
+        return (
+            <Card style={{ width: '25rem', margin: 'auto', marginTop: '2rem' }} className="register-card">
+                {this.props.user && <Navigate to="/login" />}
+                <Card.Body>
+                    <Card.Title>Register</Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Enter Your Details</Card.Subtitle>
+                    <Form>
+                        <Form.Group className="mb-3" controlId="registerForm.fname">
+                            <Form.Label>First Name</Form.Label>
+                            <Form.Control type="text" placeholder="Sudipto" onChange={this.handleChange} value={this.state.fName} name="fName" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="registerForm.lname">
+                            <Form.Label>Last Name</Form.Label>
+                            <Form.Control type="text" placeholder="Dutta" onChange={this.handleChange} name="lName" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="registerForm.email">
+                            <Form.Label>Email</Form.Label>
+                            <Form.Control type="email" placeholder="duttasudipto11@gmail.com" onChange={this.handleChange} name="email" />
+                        </Form.Group>
+                        <Form.Label>Phone</Form.Label>
+                        <InputGroup className="mb-3">
+                            <InputGroup.Text>+91</InputGroup.Text>
+                            <Form.Control id="inlineFormInputGroup" placeholder="7449550732" onChange={this.handleChange} name="phone" />
+                        </InputGroup>
+                        <Form.Group className="mb-3" controlId="registerForm.password">
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type="password" placeholder="Your Password" onChange={this.handleChange} name="password" />
+                        </Form.Group>
+                        <Button variant="primary" onClick={this.handelSubmit}>Register</Button>
+                    </Form>
+                    <Card.Text>Already have an account? <Link to="/login">Login</Link></Card.Text>
+                </Card.Body>
+            </Card>
+        );
+    }
+}
 
-export default Register;
+const mapStateToProps = (state) => ({
+    user: state.auth.user
+});
+
+const mapDispatchToProps = { register };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

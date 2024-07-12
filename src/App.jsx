@@ -7,6 +7,8 @@ import Login from './pages/login/Login';
 import About from './pages/about/About';
 import Dashboard from './pages/dashboard/Dashboard';
 import Layout from './layouts/Layout';
+import TourList from './pages/tours/TourList';
+import TourDetails from './pages/tours/TourDetails';
 import WithAuth from "./auth/WithAuth";
 import UnAuth from "./auth/UnAuth";
 
@@ -20,6 +22,8 @@ function App() {
           <Route path="/register" element={<UnAuth><Register /></UnAuth>} />
           <Route path="/about" element={<About />} />
           <Route path="/dashboard" element={<WithAuth><Dashboard /></WithAuth>} />
+          <Route path="/tours" element={<WithAuth><TourList /></WithAuth>} />
+          <Route path="/tours/:id" element={<TourDetails />} />
           <Route path="/" element={<UnAuth><Login /></UnAuth>} />
         </Route>
       </Routes>
@@ -29,3 +33,5 @@ function App() {
 }
 
 export default App;
+
+
