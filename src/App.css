@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1c2b3a !important;
+  background-color: #242525 !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +120,7 @@ width: 90px !important;
 }
 
 .about-header {
-  background-color: rgb(255, 196, 0);
+  background-color: rgb(255, 208, 0);
   color: tomato;
   font-weight: bolder;
   font-size:large;
