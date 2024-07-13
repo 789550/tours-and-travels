@@ -1,112 +1,110 @@
 
 const tours = [
+
   {
     id: 1,
-    name: "Mahabalipuram",
-    description: "Mahabalipuram is a town in Chengalpattu district in the southeastern Indian state of Tamil Nadu, best known for the UNESCO World Heritage Site of 7th- and 8th-century Hindu Group of Monuments at Mahabalipuram. It is one of the famous tourist sites in India. The Shore Temple includes many reliefs, including one 100 feet long and 45 feet high, carved out of granite.",
-    image: "https://cdn.getyourguide.com/img/tour/1a888c22dab3562823908f1f80b73bfc3205e0b2bbbc231b059ed01a18b9d4a0.jpg/132.webp",
-    price: "$200"
+    name: "Cliffs of Moher, Ireland",
+    description: "Known for being Ireland’s most scenic attraction, the cliffs rise high above the ocean, up to 702 feet at their highest point. They are home to many species of wildlife including guillemots, razorbills, and puffins. ",
+    image: "https://i0.wp.com/earlytraveler.com/wp-content/uploads/2020/05/Copy-of-Untitled-4-7.png?w=1500&ssl=1",
+    price: "$280"
   },
 
 
   {
     id: 2,
-    name: "Hampi",
-    description: "Hampi or Hampe (Kannada: [hɐmpe]), also referred to as the Group of Monuments at Hampi, is a UNESCO World Heritage Site located in Hampi (City), Ballari district now Vijayanagara district, east-central Karnataka, India.[2] Hampi predates the Vijayanagara Empire; it is mentioned in the Ramayana and the Puranas of Hinduism as Pampa Devi Tirtha Kshetra.",
-    image: "https://i.pinimg.com/564x/b2/21/c8/b221c8cef5b157d89aca65bd9667aceb.jpg",
-    price: "$250"
-  },
-
-
-  {
-    id: 3,
-    name: "Jaisalmer",
-    description: "Jaisalmer stands on a ridge of yellowish sandstone and is crowned by the ancient Jaisalmer Fort.This fort contains a royal palace and several ornate Jain temples. The town lies in the heart of the Thar Desert (the Great Indian Desert) and has a population,including the residents of the fort, of about 78,000.",
-    image: "https://i.pinimg.com/564x/f3/63/98/f36398e805bac5cb119e52893ff1bb06.jpg",
-    price: "$300"
-  },
-
-
-  {
-    id: 4,
-    name: "Manali",
-    description: "Manali is a town, near Kullu town in Kullu district in the Indian state of Himachal Pradesh. It is situated in the northern end of the Kullu Valley, formed by the Beas River.",
-    image: "https://wallpapers.com/images/high/kashmiri-flower-boaton-dal-lake-7pudkepyax3ay7vj.webp",
-    price: "$280"
-  },
-
-
-  {
-    id: 5,
-    name: "Kashmir",
-    description: "Kashmir (/ˈkæʃˌmɪər/; Kashmiri: Kạšīr, Kashmiri pronunciation: [kəˈʃiːr]) is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the Kashmir Valley was between the Great Himalayas and the Pir Panjal Range.",
-    image: "https://i.pinimg.com/564x/e3/0a/78/e30a78eda5932cc2378856270bafc99a.jpg",
+    name: "Iceland",
+    description: "This country is full of diverse landscapes but each one is as beautiful as the next. From mountains and valleys, to canyons, waterfalls and basalt column rock formations, Iceland is an adventurer’s dream.",
+    image: "https://i0.wp.com/earlytraveler.com/wp-content/uploads/2020/02/Untitled-design-2-2.png?resize=1024%2C717&ssl=1",
     price: "$350"
   },
 
 
   {
-    id: 6,
-    name: "Varanasi",
-    description: "Varanasi also Benares, Banaras or Kash is a city on the Ganges river in northern India that has a central place in the traditions of pilgrimage, death, and mourning in the Hindu world.",
-    image: "https://i.ytimg.com/vi/h1jCXqmwQxA/mqdefault.jpg",
+    id: 3,
+    name: "Hawai",
+    description: "With spectacular beaches, lush forests, hidden waterfalls, and incredible volcanos, Hawaii offers beautiful scenery on its main islands. Every island has its own unique personality with a wide range of things to do.",
+    image: "https://i0.wp.com/earlytraveler.com/wp-content/uploads/2020/05/Copy-of-Untitled-9-2.png?w=1500&ssl=1",
     price: "$150"
   },
 
 
   {
-    id: 7,
-    name: "Sikkim",
-    description: "Sikkim (/ˈsɪkɪm/ SIK-im; Nepali pronunciation: [ˈsikːim]) is a state in northeastern India. It borders the Tibet Autonomous Region of China in the north and northeast, Bhutan in the east,Modern Sikkim is a multiethnic and multilingual Indian state. ",
-    image: "https://www.taleof2backpackers.com/wp-content/uploads/2018/07/Sikkim-insteas-of-Ladakh-8.jpg",
-    price: "$230"
+    id: 4,
+    name: "Palouse Falls, Washington",
+    description: "Located in the state park named after it, Palouse Falls is a famous muse for artists and photographers looking to capture Washington state's natural beauty. The falls are accessible all year.",
+    image: "https://www.attractionsofamerica.com/images/all_thingstodo/20171208061231_palouse-falls-washington.jpg",
+    price: "$270"
   },
 
 
   {
-    id: 8,
-    name: "Visakhapatnam",
-    description: "Visakhapatnam formerly known as Vizag, Viśākha or Waltair, is the largest and most populous metropolitan city in the Indian state of Andhra Pradesh. It is between the Eastern Ghats and the coast of the Bay of Bengal.",
-    image: "https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2017/09/15/Photos/Processed/sumarinemuseum.jpg",
+    id: 5,
+    name: "Cape Town, South Africa",
+    description: "Cape Town is a long way from anywhere, but the views from Table Mountain and the miles of stunning beaches make it well worth the trip. It is a city that locates in between the mountains and the ocean that is a very livable place to live.",
+    image: "https://revsz.com/wp-content/uploads/2022/07/Cape-Town-South-Africa.jpg",
     price: "$280"
   },
 
 
   {
-    id: 9,
-    name: "Darjeeling",
-    description: "Darjeeling is a city located in the Eastern Himalayas, it has an average elevation of 2,045 metres (6,709 ft).To the west of Darjeeling lies the easternmost province of Nepal, to the east the Kingdom of Bhutan, to the north the Indian state of Sikkim.",
-    image: "https://i.pinimg.com/564x/81/89/e2/8189e2e8a82ef726ccf946bc9542ad33.jpg",
+    id: 6,
+    name: "Legazpi, Philippines",
+    description: "The explosive volcano towers over the city and its perfect conical shape can be seen from every corner of Legazpi. It is the main draw to the city, but for the best views, I suggest you visiting Sumlang Lake, Lingon Hill, Legazpi boulevard or Mayon Volcano observatory.",
+    image: "https://cdn-ffeol.nitrocdn.com/XvtpqXVmEaOeVBUbzBMDShrhLDOERTbY/assets/images/optimized/rev-4c92614/samseesworld.com/wp-content/uploads/2020/01/ELRQE8470-1.jpeg",
     price: "$195"
   },
 
 
   {
+    id: 7,
+    name: "The Alps, Europe",
+    description: "Pictures really can’t describe the magnitude and beauty of the Alps. The bright green valleys give way to the colossal mountains creating picturesque scenes.The Dolomites are a particularly impressive part of the mountain range as well.",
+    image: "https://i0.wp.com/earlytraveler.com/wp-content/uploads/2020/05/Copy-of-Untitled-3-7.png?w=1500&ssl=1",
+    price: "$200"
+  },
+
+
+  {
+    id: 8,
+    name: "Bora Bora, French Polynesia",
+    description: "Considered to be one of the most beautiful islands in the world, there’s no doubt why this lush island with brilliant blue water is at the top of the list. The tropical luxury continues into the over-water bungalows that provide a stay right out on the ocean as your own little spot of paradise.",
+    image: "https://revsz.com/wp-content/uploads/2021/07/French-Polynesia.jpg",
+    price: "$250"
+  },
+
+  {
+    id: 9,
+    name: "Thor’s Well, Oregon",
+    description: "Thor’s Well is located in Yachats, a small, remote town, and is situated very close to the popular Cape Perpetua.Essentially, if you look straight into it, it appears to be bottomless, though it is actually quite shallow at just 20 feet in depth.",
+    image: "https://www.busytourist.com/wp-content/uploads/2019/06/Oregons-Thors-Well.jpg.webp",
+    price: "$300"
+  },
+
+
+  {
     id: 10,
-    name: "Havelock Island",
-    description: "Swaraj Dweep, is one of the largest islands in Ritchie's Archipelago, to the east of Great Andaman within the Andaman Islands. It belongs to the South Andaman administrative district, part of the Indian union territory of Andaman and Nicobar Islands.",
-    image: "https://i.pinimg.com/564x/8d/80/04/8d8004778169497c88771175b18af16e.jpg",
+    name: "Multnomah Falls, Oregon",
+    description: "Oregon is home to abundant outdoor destinations, including Multnomah Falls, the most visited natural recreation area in the Pacific Northwest, and the tallest waterfall in the Columbia River Gorge.",
+    image: "https://www.attractionsofamerica.com/images/all_thingstodo/20200905094821_Multnomah-Falls-Oregon.jpg",
     price: "$250"
   },
 
 
   {
     id: 11,
-    name: "Goa",
-    description: "Tourism is generally focused on the coastal areas of Goa, with lower tourist activity inland. In 2010, there were more than 2 million tourists reported to have visited Goa, about 1.2  million of whom were from abroad.Goa was a destination of choice for Indian and foreign tourists,",
-    image: "https://www.agoda.com/wp-content/uploads/2023/02/Goa-overview-things-to-do-in-goa.jpg",
-    price: "$270"
+    name: "Turnip Rock, Michigan",
+    description: "Turnip Rock isn’t exactly the most famous of attractions in the United States, but that’s due to lack of knowledge, not lack of magnificence.It’s a very small island that you can spot from Lake Huron’s shorelines in Port Austin, Michigan.",
+    image: "https://michpics.wordpress.com/wp-content/uploads/2024/07/turnip-rock-at-sunset-by-tom-clark.jpeg?w=1024",
+    price: "$230"
   },
-
 
   {
     id: 12,
-    name: "Pondicherry",
-    description: "Pondicherry is a tourist destination. The city has many colonial buildings, churches, temples, and statues which, combined with the town planning and French-style avenues in the old districts, still preserve much of the colonial ambiance.",
-    image: "https://static.toiimg.com/photo/108158431.cms",
+    name: "Niagara Falls, New York",
+    description: "New York is home to many amazing attractions, but Niagara Falls is arguably one of those that everyone will tell you not to miss.It’s right on the border between the USA and Canada, and it’s a must-see attraction, for sure.These falls earn over 30 million visitors on an annual basis, and it’s no surprise!",
+    image: "https://www.attractionsofamerica.com/images/all_thingstodo/20200905094423_Niagara-Falls-New-York.jpg",
     price: "$260"
   }
 ];
 
 export default tours;
-//without redux

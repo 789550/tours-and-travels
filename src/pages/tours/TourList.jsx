@@ -5,7 +5,7 @@ import tours from "../../data/toursData";
 
 const TourList = () => {
   return (
-      <div className="tour-list">
+      <div className="tour-list bg-dark">
         <h1 className="tour-list-heading">Explore Our Exciting Tours</h1>
         <p className="tour-list-caption">Discover the world with our exclusive tour packages. Whether you're looking for adventure, relaxation, or cultural experiences, we have the perfect tour for you.</p>
         <div className="card-container">

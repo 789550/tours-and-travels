@@ -1,21 +1,30 @@
 
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import { useSelector } from "react-redux";
+import { Link, useLocation } from "react-router-dom";
 
-const AuthHeader = ({ user, logout }) => {
+const AuthHeader = ({ logout }) => {
+  const user = useSelector(state => state.auth.user);
+  const location = useLocation();
+
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : '';
+  };
+
   return (
-    <Navbar collapseOnSelect expand="lg" className="navbar auth-header">
-      <Container>
+    <Navbar collapseOnSelect expand="lg" className="navbar navbar-dark fixed-top bg-dark">
+      <Container fluid>
         <Navbar.Brand href="#home">Tours & Travel</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/about">About &nbsp; </Link>
-            <Link to="/dashboard">Dashboard &nbsp; </Link>
-            <Link to="/tours">Tours &nbsp; </Link>
+            <Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link>
+            <Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link>
+            <Link to="/dashboard" className={`nav-link ${isActive('/dashboard')}`}>Dashboard</Link>
+            <Link to="/tours" className={`nav-link ${isActive('/tours')}`}>Tours</Link>
           </Nav>
           <Nav>
-            <Link to="/dashboard" className="email">{user?.email} &nbsp; </Link>
+            <Link to="/dashboard" className={`nav-link email ${isActive('/dashboard')}`}>{user?.email}</Link>
             <Button onClick={logout}>Logout</Button>
           </Nav>
         </Navbar.Collapse>

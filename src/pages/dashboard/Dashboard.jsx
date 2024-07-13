@@ -16,8 +16,8 @@ const Dashboard = () => {
   }, [isLogedin]);
 
   return (
-    <h1 className="text-white">
-      Dashboard: <span style={{ fontSize: '22px', color: 'white' }}>{email}</span>
+    <h1 className="text-black">
+      Dashboard: <span style={{ fontSize: '22px' }}>{email}</span>
     </h1>
   );
 };
