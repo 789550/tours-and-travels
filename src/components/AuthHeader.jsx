@@ -2,6 +2,8 @@
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const AuthHeader = ({ logout }) => {
   const user = useSelector(state => state.auth.user);
@@ -22,6 +24,9 @@ const AuthHeader = ({ logout }) => {
             <Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link>
             <Link to="/dashboard" className={`nav-link ${isActive('/dashboard')}`}>Dashboard</Link>
             <Link to="/tours" className={`nav-link ${isActive('/tours')}`}>Tours</Link>
+            <Link to="/cart" className={`nav-link ${isActive('/cart')}`}>
+             <FontAwesomeIcon icon={faShoppingCart} /> Cart
+            </Link>
           </Nav>
           <Nav>
             <Link to="/dashboard" className={`nav-link email ${isActive('/dashboard')}`}>{user?.email}</Link>
