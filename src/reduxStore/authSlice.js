@@ -15,10 +15,8 @@ export const authSlice = createSlice({
         login: (state, action) => {
             if (state.user?.email === action.payload.email && state.user?.password === action.payload.password) {
                 state.isLogedin = true;
-                return state;
             } else {
                 state.isLogedin = false;
-                return state;
             }
         },
         logout: (state) => {
