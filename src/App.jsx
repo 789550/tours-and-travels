@@ -8,16 +8,15 @@ import Dashboard from './pages/dashboard/Dashboard';
 import Layout from './layouts/Layout';
 import TourList from './pages/tours/TourList';
 import TourDetails from './pages/tours/TourDetails';
+import Cart from './pages/cart/Cart';
 import WithAuth from "./auth/WithAuth";
 import UnAuth from "./auth/UnAuth";
-import Home from './pages/home/Home';
-import { Suspense, lazy } from "react";
 
 function App() {
   const Cart = lazy(() => import("./pages/cart/Cart"));
   return (
-    <div className="app-container mt-3">
-      <Suspense fallback={<div>Loading...</div>}>
+    <>
+    <div className="app-container">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/login" element={<UnAuth><Login /></UnAuth>} />
