@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Toast, ToastContainer, Card } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import backgroundImage from '../../assets/Berlin.jpg';
+import backgroundImage from '../../assets/Background.jpg';
 
 const Dashboard = () => {
   const user = useSelector((state) => state.auth.user);
