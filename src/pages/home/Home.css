@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> redux
 .home {
     font-family: Arial, sans-serif;
 }
@@ -12,7 +15,11 @@
 }
 
 .home-carousel img {
+<<<<<<< HEAD
     height: 550px;
+=======
+    height: 560px;
+>>>>>>> redux
     object-fit: fill;
 }
 
@@ -52,6 +59,45 @@
     font-size: 1.1em;
 }
 
+<<<<<<< HEAD
+=======
+.additional-services {
+    margin-top: 50px;
+    padding: 0 15px; 
+}
+
+.additional-services .row {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+}
+
+.service-card {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px; 
+    max-width: 275px;
+}
+
+.service-photo {
+    height: 150px; 
+    object-fit: fill;
+    border-radius: 10px;
+    margin-bottom: 10px; 
+}
+
+.service-card h4 {
+    margin-top: 5px;
+    font-size: 1.2em; 
+}
+
+.service-card p {
+    font-size: 0.9em;
+}
+>>>>>>> redux
 
 @media (max-width: 1230px) {
     .home-services .card {
@@ -84,6 +130,7 @@
     }
 }
 
+<<<<<<< HEAD
 
 @media (max-width: 410px){
     .home{
@@ -93,12 +140,43 @@
     
 @media (min-width: 770px) and (max-width: 1000px){
     .home-services, .home-testimonials{
+=======
+@media (max-width: 768px) {
+    .additional-services .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px; 
+    }
+
+    .service-card {
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 410px) {
+    .home {
+        padding-left: 70px;
+    }
+}
+
+@media (min-width: 770px) and (max-width: 1000px) {
+    .home-services, .home-testimonials {
+>>>>>>> redux
         padding-right: 180px;
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 565px) and (max-width: 765px){
     .home-services, .home-testimonials{
         padding-left: 100px;
     }
 }
+=======
+@media (min-width: 565px) and (max-width: 765px) {
+    .home-services, .home-testimonials {
+        padding-left: 100px;
+    }
+} 
+
+>>>>>>> redux

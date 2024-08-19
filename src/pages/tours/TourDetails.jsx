@@ -21,24 +21,39 @@ const TourDetails = () => {
     navigate("/cart");
   };
 
+<<<<<<< HEAD
   // Define intervals for each carousel item
   const carouselIntervals = [1000, 1000, 1000, 1000, 1000]; // Custom intervals for each image
 
   return (
     <div style={{ width: '80%', margin: 'auto', marginTop: '2rem' }} className="bg-dark details-top">
+=======
+  const carouselIntervals = [1000, 1000, 1000, 1000, 1000]; 
+
+  return (
+    <div style={{ width: '80%', margin: 'auto', marginTop: '60px' }} className="bg-dark details-top">     {/* marginTop: '2rem' */}
+>>>>>>> redux
       <h3 className="tour-name-heading">{tour.name} in Pictures</h3>
       <Carousel>
         {tour.images.map((image, index) => (
           <Carousel.Item key={index} interval={carouselIntervals[index] || 1000}>
             <img
+<<<<<<< HEAD
               className="d-block w-100 carousel-image" // Add class name for custom styling
+=======
+              className="d-block w-100 carousel-image" 
+>>>>>>> redux
               src={image}
               alt={`Slide ${index}`}
             />
           </Carousel.Item>
         ))}
       </Carousel>
+<<<<<<< HEAD
       <Card.Body>
+=======
+      <Card.Body style={{paddingLeft:'15px'}}>
+>>>>>>> redux
         <Card.Title className="tour-name">{tour.name}</Card.Title>
         <Card.Text className="tour-description">{tour.description}</Card.Text>
        

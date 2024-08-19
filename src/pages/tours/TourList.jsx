@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> redux
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
@@ -8,7 +11,11 @@ import tours from '../../data/toursData';
 
 const TourList = () => {
   return (
+<<<<<<< HEAD
     <div className="tour-list">
+=======
+    <div className="tour-list" style={{marginTop:'70px'}}>
+>>>>>>> redux
       <h1 className="tour-list-heading">Explore Our Exciting Tours</h1>
       <p className="tour-list-caption">Discover the world with our exclusive tour packages. Whether you're looking for adventure, relaxation, or cultural experiences, we have the perfect tour for you.</p>
       <div className="card-container">

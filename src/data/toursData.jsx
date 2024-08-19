@@ -57,9 +57,17 @@ import thor6 from "../assets/thor6.jpg";
 import thor7 from "../assets/thor7.jpg";
 import alps1 from "../assets/alps1.jpg";
 import alps2 from "../assets/alps2.jpg";
+<<<<<<< HEAD
 import alps3 from "../assets/alps3.webp";
 import alps4 from "../assets/alps4.jpg";
 import alps5 from "../assets/alps5.jpg";
+=======
+import alps3 from "../assets/alps3.jpg";
+import alps4 from "../assets/alps4.jpg";
+import alps5 from "../assets/alps5.jpg";
+import alps6 from "../assets/alps6.jpg";
+import alps7 from "../assets/alps7.jpg";
+>>>>>>> redux
 import turnip1 from "../assets/turnip1.webp";
 import turnip2 from "../assets/turnip2.jpg";
 import turnip3 from "../assets/turnip3.jpg";
@@ -272,7 +280,11 @@ const tours = [
     id: 10,
     name: "The Alps, Europe",
     description: "Pictures really can’t describe the magnitude and beauty of the Alps. The bright green valleys give way to the colossal mountains creating picturesque scenes.The Dolomites are a particularly impressive part of the mountain range as well.",
+<<<<<<< HEAD
     images: [alps1, alps2, alps3, alps4, alps5],
+=======
+    images: [alps1, alps2, alps3, alps4, alps5, alps6, alps7],
+>>>>>>> redux
     tourPlan: [
       { day: 1, activities: "Arrive in Munich, Germany. Explore the city center, including Marienplatz and the Viktualienmarkt." },
       { day: 2, activities: "Travel to Garmisch-Partenkirchen (about 1 hour by train or car). Visit Zugspitze, Germany's highest peak, via cable car." },
