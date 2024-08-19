@@ -3,8 +3,13 @@ import { configureStore } from "@reduxjs/toolkit";
 import authSlice from "./authSlice"
 
 export const store = configureStore({
-    reducer: {
-        auth: authSlice,
-    },
-})
+  reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
+});
 
+export const persistor = persistStore(store);
