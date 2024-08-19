@@ -1,32 +1,68 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import AuthHeader from "../components/AuthHeader";
-import storageHandler from "../helper/storageHandler";
-import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { logout } from "../reduxStore/authSlice";
+import { clearCart } from "../reduxStore/cartSlice"; 
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { FaTwitter, FaInstagram, FaFacebook, FaLinkedin, FaGithub, FaGoogle, FaWhatsapp } from "react-icons/fa";
 
 const Layout = () => {
-  const [user, setUser] = useState(null);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isLogedin = useSelector((state) => state.auth.isLogedin);
 
-  useEffect(() => {
-    getUser();
-  }, []);
-
-  const getUser = () => {
-    const authData = storageHandler.getLocalData();
-    setUser(authData);
-  };
-
-  const logout = () => {
-    storageHandler.removeLocalData("tt_auth");
-    setUser(null);
-    navigate("/login");
+  const handleLogout = () => {
+    dispatch(clearCart()); 
+    dispatch(logout());
+    navigate("/");
   };
 
   return (
     <>
-      {user?.email ? <AuthHeader user={user} logout={logout} /> : <Header />}
-      <Outlet context={{ setUser }} />
+      {isLogedin ? <AuthHeader logout={handleLogout} /> : <Header />}
+      <Outlet />
+      <footer className="layout-footer bg-dark">
+        <Container>
+          <Row>
+            <Col>
+              <h2 style={{ fontFamily: 'serif', color: 'white'}}>Contact Us</h2>
+              <p>Have questions? Get in touch with us.</p>
+              <div style={{padding: '20px'}}>
+                <Link to="/contact">
+                  <Button variant="secondary">Follow Us</Button>
+                </Link>
+              </div>
+              <div className="social-icons">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="twitter">
+                  <FaTwitter />
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="instagram">
+                  <FaInstagram />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="facebook">
+                  <FaFacebook />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="linkedin">
+                  <FaLinkedin />
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="github">
+                  <FaGithub />
+                </a>
+                <a href="https://google.com" target="_blank" rel="noopener noreferrer" className="google">
+                  <FaGoogle />
+                </a>
+                <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="whatsapp">
+                  <FaWhatsapp />
+                </a>
+              </div>
+              <hr style={{color:'whitesmoke'}}/>
+              <p>©2024, Wanderlust. All rights reserved.</p>
+            </Col>
+          </Row>
+        </Container>
+      </footer>
     </>
   );
 };

@@ -1,9 +1,9 @@
 import { Navigate } from "react-router-dom";
-import storageHandler from "../helper/storageHandler";
+import { useSelector } from "react-redux";
 
 const WithAuth = ({ children }) => {
-    const authData = storageHandler.getLocalData();
-    if (authData?.email) {
+    const isLogedin = useSelector(state=> state.auth.isLogedin)
+    if (isLogedin) {
         return <>{children}</>
     } else {
         return <Navigate to="/login" replace />
