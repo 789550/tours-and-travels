@@ -17,7 +17,7 @@ const Header = () => {
         <img
             src={logo}
             alt="Logo"
-            width="50"
+            width="60"
             height="50"
             className="d-inline-block align-top"
             style={{ marginRight: '10px' }} 
