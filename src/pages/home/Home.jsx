@@ -8,11 +8,6 @@ import relax from "../../assets/relax and unwind.jpeg";
 import home1 from "../../assets/home1.jpg";
 import vizag from "../../assets/vizag.jpg";
 import home3 from "../../assets/home3.jpg";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 import adventurePhoto from "../../assets/mountains.jpg"; 
 import beachPhoto from "../../assets/beach2.gif";       
 import culturePhoto from "../../assets/culture3.jpg"; 
@@ -20,10 +15,6 @@ import transportPhoto from "../../assets/transport2.jpg";
 import cityPhoto from "../../assets/home4.jpg"; 
 import naturePhoto from "../../assets/home5.jpg"; 
 import luxuryPhoto from "../../assets/home6.jpg"; 
-<<<<<<< HEAD
-=======
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
 const Home = () => {
   return (
@@ -33,15 +24,7 @@ const Home = () => {
           <Row>
             <Col>
               <Carousel className="home-carousel">
-<<<<<<< HEAD
                 <Carousel.Item interval={5000}>
-=======
-<<<<<<< HEAD
-                <Carousel.Item interval={4000}>
-=======
-                <Carousel.Item interval={5000}>
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <img className="d-block w-100" src={germany} alt="First slide" />
                   <Carousel.Caption>
                     <h3>Explore Exotic Destinations</h3>
@@ -74,12 +57,8 @@ const Home = () => {
       <section className="home-services">
         <Container>
           <Row>
-<<<<<<< HEAD
             <Col>
               <h2>Our Services</h2>
-=======
-            <Col> 
->>>>>>> redux
               <p>We offer a variety of services to make your travel experience unforgettable.</p>
             </Col>
           </Row>
@@ -87,15 +66,7 @@ const Home = () => {
             <Col md={4}>
               <Card>
                 <Card.Img variant="top" src={home1} />
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-<<<<<<< HEAD
-                <Card.Body>
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Title>Adventure Tours</Card.Title>
                   <Card.Text>Experience thrilling adventures around the world.</Card.Text>
                 </Card.Body>
@@ -104,15 +75,7 @@ const Home = () => {
             <Col md={4}>
               <Card>
                 <Card.Img variant="top" src={vizag} />
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-<<<<<<< HEAD
-                <Card.Body>
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Title>Relaxation Packages</Card.Title>
                   <Card.Text>Relax and unwind with our exclusive relaxation packages.</Card.Text>
                 </Card.Body>
@@ -121,37 +84,20 @@ const Home = () => {
             <Col md={4}>
               <Card>
                 <Card.Img variant="top" src={home3} />
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-<<<<<<< HEAD
-                <Card.Body>
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Title>Cultural Experiences</Card.Title>
                   <Card.Text>Immerse yourself in the rich cultures around the world.</Card.Text>
                 </Card.Body>
               </Card>
             </Col>
           </Row>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
           {/* New Service Cards */}
           <Row style={{marginTop: "30px"}}>
             <Col md={4}>
               <Card>
                 <Card.Img variant="top" src={cityPhoto} />
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Title>City Escapes</Card.Title>
                   <Card.Text>Discover the vibrant life of bustling cities.</Card.Text>
                 </Card.Body>
@@ -160,11 +106,7 @@ const Home = () => {
             <Col md={4}>
               <Card>
                 <Card.Img variant="top" src={naturePhoto} />
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Title>Nature Escapes</Card.Title>
                   <Card.Text>Reconnect with nature through our scenic nature escapes.</Card.Text>
                 </Card.Body>
@@ -173,11 +115,7 @@ const Home = () => {
             <Col md={4}>
               <Card>
                 <Card.Img variant="top" src={luxuryPhoto} />
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Title>Luxury Travel</Card.Title>
                   <Card.Text>Indulge in opulent travel experiences with our luxury packages.</Card.Text>
                 </Card.Body>
@@ -226,10 +164,6 @@ const Home = () => {
               </Card>
             </Col>
           </Row>
-<<<<<<< HEAD
-=======
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
         </Container>
       </section>
 
@@ -243,15 +177,7 @@ const Home = () => {
           <Row>
             <Col md={4}>
               <Card>
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-<<<<<<< HEAD
-                <Card.Body>
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Text>"Amazing experience! Highly recommended."</Card.Text>
                   <Card.Footer>John Doe</Card.Footer>
                 </Card.Body>
@@ -259,15 +185,7 @@ const Home = () => {
             </Col>
             <Col md={4}>
               <Card>
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-<<<<<<< HEAD
-                <Card.Body>
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Text>"A truly unforgettable journey. Will travel again."</Card.Text>
                   <Card.Footer>Jane Smith</Card.Footer>
                 </Card.Body>
@@ -275,15 +193,7 @@ const Home = () => {
             </Col>
             <Col md={4}>
               <Card>
-<<<<<<< HEAD
                 <Card.Body className="bg-dark text-warning">
-=======
-<<<<<<< HEAD
-                <Card.Body>
-=======
-                <Card.Body  className="bg-dark text-warning">
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                   <Card.Text>"Great service and beautiful destinations."</Card.Text>
                   <Card.Footer>Emily Johnson</Card.Footer>
                 </Card.Body>

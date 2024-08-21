@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/wanderlust.png'; 
-=======
-import { Nav, Navbar } from "react-bootstrap";
-import { Link } from "react-router-dom";
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
 const Header = () => {
   const location = useLocation();
@@ -16,7 +11,6 @@ const Header = () => {
   };
 
   return (
-<<<<<<< HEAD
     <Navbar expand="lg" className="navbar navbar-dark fixed-top bg-dark">
       <Container fluid>
         <Navbar.Brand href="#home">
@@ -44,20 +38,6 @@ const Header = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
-=======
-    <Navbar expand="lg" className="navbar">
-      <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="me-auto">
-          <Link to="/">Home &nbsp; </Link>
-          <Link to="/about">About &nbsp; </Link>
-          <Link to="/login">Login &nbsp; </Link>
-          <Link to="/register"> Register &nbsp; </Link>
-          <Link to="/dashboard"> Dashboard &nbsp; </Link>
-        </Nav>
-      </Navbar.Collapse>
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
     </Navbar>
   );
 }

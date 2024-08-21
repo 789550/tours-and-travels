@@ -40,18 +40,8 @@ const Dashboard = () => {
           });
 
           setCurrentOfferIndex((prevIndex) => prevIndex + 1);
-<<<<<<< HEAD
         }, 3000); 
       }, 1000);
-=======
-<<<<<<< HEAD
-        }, 3000); // 3 seconds for toast to remain visible
-      }, 1000); // 1 second interval between toasts
-=======
-        }, 3000); 
-      }, 1000);
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
       return () => clearTimeout(timer);
     }
@@ -59,55 +49,15 @@ const Dashboard = () => {
 
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
-<<<<<<< HEAD
     backgroundSize: 'fill', 
     backgroundPosition: 'center',
     minHeight: '100vh',
     minWidth: '100vw', 
     backgroundRepeat: 'no-repeat',
-=======
-<<<<<<< HEAD
-    backgroundSize: 'fill',
-    backgroundPosition: 'center',
-    minHeight: '100vh',
-    minWidth: '1200px',
-    backgroundRepeat: 'no-repeat', //newly added
-    // backgroundAttachment: 'fixed',
-=======
-    backgroundSize: 'fill', 
-    backgroundPosition: 'center',
-    minHeight: '100vh',
-    minWidth: '100vw', 
-    backgroundRepeat: 'no-repeat',
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
     padding: '20px',
     color: 'white',
     display: 'flex',
     flexDirection: 'column',
-<<<<<<< HEAD
-    alignItems: 'center',
-    justifyContent: 'center', 
-    marginBottom: '50px',
-    marginTop: '60px'
-=======
-<<<<<<< HEAD
-    alignItems: 'center'
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
-  };
-  
-  const cardStyle = {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)', 
-    border: 'none',
-    boxShadow: 'none',
-    maxWidth: '90%',
-    padding: '2rem',
-    paddingBottom: '500px'
-  };
-<<<<<<< HEAD
-  
-=======
-=======
     alignItems: 'center',
     justifyContent: 'center', 
     marginBottom: '50px',
@@ -123,8 +73,6 @@ const Dashboard = () => {
     paddingBottom: '500px'
   };
   
->>>>>>> redux
->>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
   const toastStyle = {
     backgroundColor: '#f5ca0b',
@@ -225,32 +173,3 @@ const Dashboard = () => {
 
 export default Dashboard;
 
-
-
-
-
-//previously
-// const backgroundStyle = {
-//   backgroundImage: url(${backgroundImage}),
-//   backgroundSize: 'fill',
-//   backgroundPosition: 'center',
-//   minHeight: '100vh',
-//   minWidth: '1000px',
-//   backgroundRepeat: 'no-repeat', 
-//   padding: '20px',
-//   color: 'white',
-//   display: 'flex',
-//   flexDirection: 'column',
-//   alignItems: 'center',
-//   marginBottom:'50px'
-// };
-
-// const cardStyle = {
-//   backgroundColor: 'rgba(255, 255, 255, 0.5)', 
-//   border: 'none',
-//   boxShadow: 'none',
-//   maxWidth: '90%',
-//   margin: 'auto',
-//   padding: '2rem',
-//   paddingBottom: '500px'
-// };
