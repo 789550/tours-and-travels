@@ -3,7 +3,8 @@ import { Form, InputGroup, Button, Row, Col } from 'react-bootstrap';
 import { Link, Navigate } from "react-router-dom";
 import { register } from "../../reduxStore/authSlice";
 import { connect } from "react-redux";
-import registerImage from "../../assets/register.jpg"; 
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import registerImage from "../../assets/register.jpg";
 
 class Register extends React.Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class Register extends React.Component {
             firstName: "",
             lastName: "",
             password: "",
+            showPassword: false 
         };
     }
 
@@ -33,6 +35,12 @@ class Register extends React.Component {
         this.props.register(newUser);
     }
 
+    togglePasswordVisibility = () => {
+        this.setState(prevState => ({
+            showPassword: !prevState.showPassword
+        }));
+    }
+
     render() {
         return (
             <div className="register-container" style={{ margin: 'auto', marginTop: '2rem', maxWidth: '100%', padding: '1rem' }}>
@@ -43,7 +51,7 @@ class Register extends React.Component {
                         <p>Enter Your Details</p>
                         <Form onSubmit={this.handleSubmit}>
                             <Form.Group className="mb-3" controlId="registerForm.firstName">
-                                <Form.Label>First Name</Form.Label>
+                                <Form.Label>First Name<sup className='text-black-200'>*</sup></Form.Label>
                                 <Form.Control 
                                     type="text" 
                                     placeholder="Sudipto" 
@@ -54,7 +62,7 @@ class Register extends React.Component {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="registerForm.lastName">
-                                <Form.Label>Last Name</Form.Label>
+                                <Form.Label>Last Name<sup className='text-black-200'>*</sup></Form.Label>
                                 <Form.Control 
                                     type="text" 
                                     placeholder="Dutta" 
@@ -65,7 +73,7 @@ class Register extends React.Component {
                                 />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="registerForm.email">
-                                <Form.Label>Email</Form.Label>
+                                <Form.Label>Email<sup className='text-black-200'>*</sup></Form.Label>
                                 <Form.Control 
                                     type="email" 
                                     placeholder="duttasudipto11@gmail.com" 
@@ -75,7 +83,7 @@ class Register extends React.Component {
                                     required 
                                 />
                             </Form.Group>
-                            <Form.Label>Phone</Form.Label>
+                            <Form.Label>Phone<sup className='text-black-200'>*</sup></Form.Label>
                             <InputGroup className="mb-3">
                                 <InputGroup.Text>+91</InputGroup.Text>
                                 <Form.Control 
@@ -88,17 +96,30 @@ class Register extends React.Component {
                                 />
                             </InputGroup>
                             <Form.Group className="mb-3" controlId="registerForm.password">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control 
-                                    type="password" 
-                                    placeholder="Your Password" 
-                                    onChange={this.handleChange} 
-                                    value={this.state.password} 
-                                    name="password" 
-                                    required 
-                                />
+                                <Form.Label>Password<sup className='text-black-200'>*</sup></Form.Label>
+                                <div className="position-relative">
+                                    <Form.Control 
+                                        type={this.state.showPassword ? "text" : "password"} 
+                                        placeholder="Your Password" 
+                                        onChange={this.handleChange} 
+                                        value={this.state.password} 
+                                        name="password" 
+                                        required 
+                                    />
+                                    <span
+                                        className="position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer"
+                                        onClick={this.togglePasswordVisibility}
+                                        style={{ zIndex: 1 }}
+                                    >
+                                        {this.state.showPassword ? (
+                                            <AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF' />
+                                        ) : (
+                                            <AiOutlineEye fontSize={24} fill='#AFB2BF' />
+                                        )}
+                                    </span>
+                                </div>
                             </Form.Group>
-                            <Button variant="primary" type="submit" className="register-button" style={{ width: '100%' }}>Register</Button>
+                            <Button type="submit" className="register-button" style={{ width: '100%' }}>Register</Button>
                         </Form>
                         <p className="mt-3">Already have an account? <Link to="/login">Login</Link></p>
                     </Col>

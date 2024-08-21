@@ -1,6 +1,7 @@
 
 import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
+import logo from '../assets/wanderlust.png'; 
 
 const Header = () => {
   const location = useLocation();
@@ -12,10 +13,20 @@ const Header = () => {
   return (
     <Navbar expand="lg" className="navbar navbar-dark fixed-top bg-dark">
       <Container fluid>
-        <Navbar.Brand href="#home">Tours & Travel</Navbar.Brand>
+        <Navbar.Brand href="#home">
+        <img
+            src={logo}
+            alt="Logo"
+            width="60"
+            height="50"
+            className="d-inline-block align-top"
+            style={{ marginRight: '10px' }} 
+          />
+          Wanderlust
+          </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="mx-auto">
             <Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link>
             <Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link>
             <Link to="/dashboard" className={`nav-link ${isActive('/dashboard')}`}>Dashboard</Link>
@@ -32,6 +43,3 @@ const Header = () => {
 }
 
 export default Header;
-
-
-

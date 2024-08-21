@@ -3,14 +3,14 @@ import { Form, Button, Row, Col, Container } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { login } from "../../reduxStore/authSlice";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-import {FcGoogle} from "react-icons/fc"
+import { FcGoogle } from "react-icons/fc";
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import loginImage from "../../assets/login1.jpg";
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false); 
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
@@ -28,7 +28,7 @@ const Login = () => {
                     <p>Enter Your Details</p>
                     <Form onSubmit={handleLogin}>
                         <Form.Group className="mb-3" controlId="loginForm.email">
-                            <Form.Label>Email</Form.Label>
+                            <Form.Label>Email<sup className='text-black-200'>*</sup></Form.Label>
                             <Form.Control
                                 type="email"
                                 placeholder="duttasudipto11@gmail.com"
@@ -38,14 +38,27 @@ const Login = () => {
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="loginForm.password">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control
-                                type="password"
-                                placeholder="Your password"
-                                onChange={(e) => setPassword(e.target.value)}
-                                value={password}
-                                required
-                            />
+                            <Form.Label>Password<sup className='text-black-200'>*</sup></Form.Label>
+                            <div className="position-relative">
+                                <Form.Control
+                                    type={showPassword ? "text" : "password"}
+                                    placeholder="Your password"
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    value={password}
+                                    required
+                                />
+                                <span
+                                    className="position-absolute top-50 end-0 translate-middle-y me-2 cursor-pointer"
+                                    onClick={() => setShowPassword(prev => !prev)}
+                                    style={{ zIndex: 1 }}
+                                >
+                                    {showPassword ? (
+                                        <AiOutlineEyeInvisible fontSize={24} fill='#AFB2BF' />
+                                    ) : (
+                                        <AiOutlineEye fontSize={24} fill='#AFB2BF' />
+                                    )}
+                                </span>
+                            </div>
                         </Form.Group>
                         <Button className="login-button" type="submit" style={{ width: '100%' }}>Login</Button>
                     </Form>
@@ -65,7 +78,6 @@ const Login = () => {
                     </Container>
                     <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue&pli=1&nlr=1" target="_blank" rel="noopener noreferrer">
                         <Button variant="light" className="mb-3" style={{ width: '100%', borderRadius: '15px' }}>
-                            {/* <FontAwesomeIcon icon={faGoogle} style={{ marginRight: '0.5rem' }} /> */}
                             <FcGoogle style={{ marginRight: '0.5rem' }} />
                             Sign in with Google
                         </Button>
@@ -80,3 +92,4 @@ const Login = () => {
 };
 
 export default Login;
+

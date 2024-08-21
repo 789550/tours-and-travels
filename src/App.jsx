@@ -12,9 +12,11 @@ import WithAuth from "./auth/WithAuth";
 import UnAuth from "./auth/UnAuth";
 import Home from './pages/home/Home';
 import { Suspense, lazy } from "react";
+// import Checkout from './pages/checkout/Checkout'; 
 
 function App() {
   const Cart = lazy(() => import("./pages/cart/Cart"));
+  const Checkout = lazy(() => import("./pages/checkout/Checkout"));
   return (
     <div className="app-container mt-3">
       <Suspense fallback={<div>Loading...</div>}>
@@ -27,6 +29,7 @@ function App() {
           <Route path="/tours" element={<WithAuth><TourList /></WithAuth>} />
           <Route path="/tours/:id" element={<TourDetails />} />
           <Route path="/cart" element={<WithAuth><Cart /></WithAuth>} />
+          <Route path="/checkout" element={<WithAuth><Checkout /></WithAuth>} />
           <Route path="/" element={<Home />} />
         </Route>
       </Routes>

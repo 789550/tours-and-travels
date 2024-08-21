@@ -21,24 +21,23 @@ const TourDetails = () => {
     navigate("/cart");
   };
 
-  // Define intervals for each carousel item
-  const carouselIntervals = [1000, 1000, 1000, 1000, 1000]; // Custom intervals for each image
+  const carouselIntervals = [1000, 1000, 1000, 1000, 1000]; 
 
   return (
-    <div style={{ width: '80%', margin: 'auto', marginTop: '2rem' }} className="bg-dark details-top">
+    <div style={{ width: '80%', margin: 'auto', marginTop: '60px' }} className="bg-dark details-top">     {/* marginTop: '2rem' */}
       <h3 className="tour-name-heading">{tour.name} in Pictures</h3>
       <Carousel>
         {tour.images.map((image, index) => (
           <Carousel.Item key={index} interval={carouselIntervals[index] || 1000}>
             <img
-              className="d-block w-100 carousel-image" // Add class name for custom styling
+              className="d-block w-100 carousel-image" 
               src={image}
               alt={`Slide ${index}`}
             />
           </Carousel.Item>
         ))}
       </Carousel>
-      <Card.Body>
+      <Card.Body style={{paddingLeft:'15px'}}>
         <Card.Title className="tour-name">{tour.name}</Card.Title>
         <Card.Text className="tour-description">{tour.description}</Card.Text>
        

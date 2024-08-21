@@ -3,10 +3,13 @@ import { Card, Button, Row, Col } from 'react-bootstrap';
 import { increaseQuantity, decreaseQuantity, removeFromCart, clearCart } from '../../reduxStore/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom'; 
+import { GoChevronLeft } from "react-icons/go";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
+  const navigate = useNavigate(); 
 
   const handleRemoveFromCart = (id) => {
     dispatch(removeFromCart(id));
@@ -34,11 +37,12 @@ const Cart = () => {
   };
 
   return (
-    <div className={`cart-container ${cartItems.length > 0 ? 'has-items' : ''}`}>
+    <div className={cartItems.length > 0 ? 'cart-container has-items' : 'cart-container'}>
       {cartItems.length === 0 ? (
         <div className="empty-cart-message">
           <h1 style={{ fontFamily: 'serif' }}>Your Cart :</h1>
           <p style={{ fontSize: '22px' }}>Your cart is empty.</p>
+          <button className="back-to-tours-button" onClick={() => navigate("/tours")}><GoChevronLeft />Back to Tours</button>
         </div>
       ) : (
         <>
@@ -90,7 +94,7 @@ const Cart = () => {
             <p>Total Items: {cartItems.length}</p>
             <p>Total Amount: ${calculateTotal()}</p>
             <div className="d-flex justify-content-center">
-              <Button className="checkout btn-sm mx-2">
+              <Button className="checkout btn-sm mx-2" onClick={() => navigate("/checkout")}>
                 Checkout Now
               </Button>
               <Button className="empty-cart btn-sm mx-2" onClick={handleClearCart}>
@@ -103,4 +107,5 @@ const Cart = () => {
     </div>
   );
 };
+
 export default Cart;
