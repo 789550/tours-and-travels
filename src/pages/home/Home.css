@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 .home {
     font-family: Arial, sans-serif;
 }
@@ -11,7 +18,15 @@
 }
 
 .home-carousel img {
+<<<<<<< HEAD
     height: 560px;
+=======
+<<<<<<< HEAD
+    height: 550px;
+=======
+    height: 560px;
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
     object-fit: fill;
 }
 
@@ -51,6 +66,11 @@
     font-size: 1.1em;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 .additional-services {
     margin-top: 50px;
     padding: 0 15px; 
@@ -87,6 +107,10 @@
 .service-card p {
     font-size: 0.9em;
 }
+<<<<<<< HEAD
+=======
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
 @media (max-width: 1230px) {
     .home-services .card {
@@ -119,6 +143,36 @@
     }
 }
 
+<<<<<<< HEAD
+@media (max-width: 768px) {
+    .additional-services .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px; 
+    }
+=======
+<<<<<<< HEAD
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
+
+    .service-card {
+        margin: 10px 0; 
+    }
+}
+
+@media (max-width: 410px) {
+    .home {
+        padding-left: 70px;
+    }
+}
+<<<<<<< HEAD
+
+@media (min-width: 770px) and (max-width: 1000px) {
+    .home-services, .home-testimonials {
+=======
+    
+@media (min-width: 770px) and (max-width: 1000px){
+    .home-services, .home-testimonials{
+=======
 @media (max-width: 768px) {
     .additional-services .col-md-3 {
         flex: 0 0 100%;
@@ -139,13 +193,32 @@
 
 @media (min-width: 770px) and (max-width: 1000px) {
     .home-services, .home-testimonials {
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
         padding-right: 180px;
     }
 }
 
+<<<<<<< HEAD
 @media (min-width: 565px) and (max-width: 765px) {
     .home-services, .home-testimonials {
         padding-left: 100px;
     }
 } 
 
+=======
+<<<<<<< HEAD
+@media (min-width: 565px) and (max-width: 765px){
+    .home-services, .home-testimonials{
+        padding-left: 100px;
+    }
+}
+=======
+@media (min-width: 565px) and (max-width: 765px) {
+    .home-services, .home-testimonials {
+        padding-left: 100px;
+    }
+} 
+
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf

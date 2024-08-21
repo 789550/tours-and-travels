@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+//in case of hook and return use jsx otherwise js
+import { configureStore } from "@reduxjs/toolkit";
+import authSlice from "./authSlice"
+=======
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import authSlice from './authSlice';
@@ -17,6 +25,10 @@ const rootReducer = combineReducers({
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
+<<<<<<< HEAD
+=======
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
 export const store = configureStore({
   reducer: persistedReducer,

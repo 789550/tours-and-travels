@@ -3,13 +3,28 @@ import { Card, Button, Row, Col } from 'react-bootstrap';
 import { increaseQuantity, decreaseQuantity, removeFromCart, clearCart } from '../../reduxStore/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom'; 
 import { GoChevronLeft } from "react-icons/go";
+=======
+<<<<<<< HEAD
+=======
+import { useNavigate } from 'react-router-dom'; 
+import { GoChevronLeft } from "react-icons/go";
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
+<<<<<<< HEAD
   const navigate = useNavigate(); 
+=======
+<<<<<<< HEAD
+=======
+  const navigate = useNavigate(); 
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 
   const handleRemoveFromCart = (id) => {
     dispatch(removeFromCart(id));
@@ -37,12 +52,27 @@ const Cart = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className={cartItems.length > 0 ? 'cart-container has-items' : 'cart-container'}>
+=======
+<<<<<<< HEAD
+    <div className={`cart-container ${cartItems.length > 0 ? 'has-items' : ''}`}>
+=======
+    <div className={cartItems.length > 0 ? 'cart-container has-items' : 'cart-container'}>
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
       {cartItems.length === 0 ? (
         <div className="empty-cart-message">
           <h1 style={{ fontFamily: 'serif' }}>Your Cart :</h1>
           <p style={{ fontSize: '22px' }}>Your cart is empty.</p>
+<<<<<<< HEAD
           <button className="back-to-tours-button" onClick={() => navigate("/tours")}><GoChevronLeft />Back to Tours</button>
+=======
+<<<<<<< HEAD
+=======
+          <button className="back-to-tours-button" onClick={() => navigate("/tours")}><GoChevronLeft />Back to Tours</button>
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
         </div>
       ) : (
         <>
@@ -94,7 +124,15 @@ const Cart = () => {
             <p>Total Items: {cartItems.length}</p>
             <p>Total Amount: ${calculateTotal()}</p>
             <div className="d-flex justify-content-center">
+<<<<<<< HEAD
               <Button className="checkout btn-sm mx-2" onClick={() => navigate("/checkout")}>
+=======
+<<<<<<< HEAD
+              <Button className="checkout btn-sm mx-2">
+=======
+              <Button className="checkout btn-sm mx-2" onClick={() => navigate("/checkout")}>
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
                 Checkout Now
               </Button>
               <Button className="empty-cart btn-sm mx-2" onClick={handleClearCart}>
@@ -107,5 +145,12 @@ const Cart = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
 export default Cart;

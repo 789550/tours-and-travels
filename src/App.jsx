@@ -12,11 +12,25 @@ import WithAuth from "./auth/WithAuth";
 import UnAuth from "./auth/UnAuth";
 import Home from './pages/home/Home';
 import { Suspense, lazy } from "react";
+<<<<<<< HEAD
 // import Checkout from './pages/checkout/Checkout'; 
 
 function App() {
   const Cart = lazy(() => import("./pages/cart/Cart"));
   const Checkout = lazy(() => import("./pages/checkout/Checkout"));
+=======
+<<<<<<< HEAD
+
+function App() {
+  const Cart = lazy(() => import("./pages/cart/Cart"));
+=======
+// import Checkout from './pages/checkout/Checkout'; 
+
+function App() {
+  const Cart = lazy(() => import("./pages/cart/Cart"));
+  const Checkout = lazy(() => import("./pages/checkout/Checkout"));
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
   return (
     <div className="app-container mt-3">
       <Suspense fallback={<div>Loading...</div>}>
@@ -29,7 +43,14 @@ function App() {
           <Route path="/tours" element={<WithAuth><TourList /></WithAuth>} />
           <Route path="/tours/:id" element={<TourDetails />} />
           <Route path="/cart" element={<WithAuth><Cart /></WithAuth>} />
+<<<<<<< HEAD
           <Route path="/checkout" element={<WithAuth><Checkout /></WithAuth>} />
+=======
+<<<<<<< HEAD
+=======
+          <Route path="/checkout" element={<WithAuth><Checkout /></WithAuth>} />
+>>>>>>> redux
+>>>>>>> 3f1499ef25fef74babefb697711e98a03221beaf
           <Route path="/" element={<Home />} />
         </Route>
       </Routes>
