@@ -49,7 +49,7 @@ const Dashboard = () => {
 
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
-    backgroundSize: 'fill', 
+    backgroundSize: 'cover', 
     backgroundPosition: 'center',
     minHeight: '100vh',
     minWidth: '100vw', 
@@ -61,7 +61,7 @@ const Dashboard = () => {
     alignItems: 'center',
     justifyContent: 'center', 
     marginBottom: '50px',
-    marginTop: '60px'
+    marginTop: '10px'
   };
   
   const cardStyle = {
@@ -172,4 +172,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-

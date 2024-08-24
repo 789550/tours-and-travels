@@ -19,7 +19,7 @@ const AuthHeader = ({ logout }) => {
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar navbar-dark fixed-top bg-dark">
       <Container fluid>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" style={{ fontFamily: 'serif' }}>
         <img
             src={logo}
             alt="Logo"
@@ -57,4 +57,3 @@ const AuthHeader = ({ logout }) => {
 };
 
 export default AuthHeader;
-

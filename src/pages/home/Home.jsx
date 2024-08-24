@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Button, Card, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FaMountain, FaUmbrellaBeach, FaLandmark, FaBus } from 'react-icons/fa'; 
 import './Home.css';
 import germany from "../../assets/germany.jpeg";
 import london from "../../assets/London.webp";
@@ -8,13 +9,9 @@ import relax from "../../assets/relax and unwind.jpeg";
 import home1 from "../../assets/home1.jpg";
 import vizag from "../../assets/vizag.jpg";
 import home3 from "../../assets/home3.jpg";
-import adventurePhoto from "../../assets/mountains.jpg"; 
-import beachPhoto from "../../assets/beach2.gif";       
-import culturePhoto from "../../assets/culture3.jpg"; 
-import transportPhoto from "../../assets/transport2.jpg"; 
-import cityPhoto from "../../assets/home4.jpg"; 
-import naturePhoto from "../../assets/home5.jpg"; 
-import luxuryPhoto from "../../assets/home6.jpg"; 
+import cityPhoto from "../../assets/home4.jpg";
+import naturePhoto from "../../assets/home5.jpg";
+import luxuryPhoto from "../../assets/home6.jpg";
 
 const Home = () => {
   return (
@@ -93,7 +90,7 @@ const Home = () => {
           </Row>
 
           {/* New Service Cards */}
-          <Row style={{marginTop: "30px"}}>
+          <Row style={{ marginTop: "30px" }}>
             <Col md={4}>
               <Card>
                 <Card.Img variant="top" src={cityPhoto} />
@@ -123,47 +120,41 @@ const Home = () => {
             </Col>
           </Row>
 
-          <h2 style={{marginTop: "30px"}}>Key Features</h2>
+          <h2 style={{ marginTop: "60px" }}>Key Features</h2>
           <p>Discover the perfect getaway where majestic mountains, pristine beaches, iconic landmarks, and seamless transport come together for an unforgettable adventure.</p>
+
 
           <Row className="additional-services">
             <Col md={3}>
-              <Card className="service-card">
-                <Card.Body>
-                  <Card.Img variant="top" src={adventurePhoto} className="service-photo" />
-                  <Card.Title>Mountains</Card.Title>
-                  <Card.Text>Thrilling adventure tours tailored for adrenaline seekers.</Card.Text>
-                </Card.Body>
-              </Card>
+              <div className="service-icon">
+                <FaMountain className="icon" />
+                <h4>Mountains</h4>
+                <p>Thrilling adventure tours tailored for adrenaline seekers.</p>
+              </div>
             </Col>
             <Col md={3}>
-              <Card className="service-card">
-                <Card.Body>
-                  <Card.Img variant="top" src={beachPhoto} className="service-photo" />
-                  <Card.Title>Beach</Card.Title>
-                  <Card.Text>Relax on beautiful beaches with our beach vacation packages.</Card.Text>
-                </Card.Body>
-              </Card>
+              <div className="service-icon">
+                <FaUmbrellaBeach className="icon" />
+                <h4>Beach</h4>
+                <p>Relax on beautiful beaches with our beach vacation packages.</p>
+              </div>
             </Col>
             <Col md={3}>
-              <Card className="service-card">
-                <Card.Body>
-                  <Card.Img variant="top" src={culturePhoto} className="service-photo" />
-                  <Card.Title>Landmarks</Card.Title>
-                  <Card.Text>Discover cultural heritage and traditions around the world.</Card.Text>
-                </Card.Body>
-              </Card>
+              <div className="service-icon">
+                <FaLandmark className="icon" />
+                <h4>Landmarks</h4>
+                <p>Discover cultural heritage and traditions around the world.</p>
+              </div>
             </Col>
             <Col md={3}>
-              <Card className="service-card">
-                <Card.Body>
-                  <Card.Img variant="top" src={transportPhoto} className="service-photo" />
-                  <Card.Title>Transport</Card.Title>
-                  <Card.Text>Reliable and comfortable transport services for you.</Card.Text>
-                </Card.Body>
-              </Card>
+              <div className="service-icon">
+                <FaBus className="icon" />
+                <h4>Transport</h4>
+                <p>Reliable and comfortable transport services for you.</p>
+              </div>
             </Col>
           </Row>
+
         </Container>
       </section>
 

@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <Navbar expand="lg" className="navbar navbar-dark fixed-top bg-dark">
       <Container fluid>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" style={{ fontFamily: 'serif' }}>
         <img
             src={logo}
             alt="Logo"

@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { Card, Button, Row, Col } from 'react-bootstrap';
+import { Card, Button, Row, Col, Container } from 'react-bootstrap';
 import { increaseQuantity, decreaseQuantity, removeFromCart, clearCart } from '../../reduxStore/cartSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
@@ -46,6 +46,7 @@ const Cart = () => {
         </div>
       ) : (
         <>
+       
           <h1 style={{ fontFamily: 'serif' }}>Your Cart :</h1>
           {cartItems.map((item) => (
             <Card key={item.id} className="cart-item mb-3 p-3 w-100 d-flex flex-wrap">

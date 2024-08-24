@@ -1,3 +1,4 @@
+
 .home {
     font-family: Arial, sans-serif;
 }
@@ -8,10 +9,12 @@
     text-align: center;
     padding: 60px 0;
     position: relative;
+    width: 100vw;
+    /* width: 100vw; */
 }
 
 .home-carousel img {
-    height: 560px;
+    height: 620px;
     object-fit: fill;
 }
 
@@ -88,6 +91,28 @@
     font-size: 0.9em;
 }
 
+
+
+.service-icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-icon .icon {
+    font-size: 3em;
+    color: #343a40; 
+    margin-bottom: 10px;
+}
+
+.service-icon h4 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.service-icon p {
+    font-size: 0.9em;
+}
+
 @media (max-width: 1230px) {
     .home-services .card {
         margin-bottom: 20px;
@@ -149,3 +174,8 @@
     }
 } 
 
+
+
+.home-testimonials {
+    margin-top: -30px;
+}
