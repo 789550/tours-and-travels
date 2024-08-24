@@ -48,7 +48,7 @@ import kyoto3 from "../assets/kyoto3.jpg";
 import kyoto4 from "../assets/kyoto4.jpg";
 import kyoto5 from "../assets/kyoto5.jpg";
 import kyoto6 from "../assets/kyoto6.jpg";
-import thor1 from "../assets/thor1.webp";
+import thor1 from "../assets/thor1.jpg";
 import thor2 from "../assets/thor2.jpg";
 import thor3 from "../assets/thor3.jpg";
 import thor4 from "../assets/thor4.jpg";
