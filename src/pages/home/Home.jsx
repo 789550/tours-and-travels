@@ -52,7 +52,7 @@ const Home = () => {
       </header>
 
       <section className="home-services">
-        <Container fluid>
+        <Container>
           <Row>
             <Col>
               <h2>Our Services</h2>
