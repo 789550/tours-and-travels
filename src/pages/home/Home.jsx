@@ -44,7 +44,7 @@ const Home = () => {
                 </Carousel.Item>
               </Carousel>
               <Link to="/tours">
-                <Button variant="primary" className="explore-button">Explore Tours</Button>
+                <Button variant="danger" className="explore-button">Explore Tours</Button>
               </Link>
             </Col>
           </Row>

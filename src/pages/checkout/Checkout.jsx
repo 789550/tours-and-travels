@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Card, Row, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import backgroundImage from '../../assets/checkout4.jpg'; 
+import image1 from '../../assets/order1.png'; 
+import image2 from '../../assets/order2.png'; 
 
 const Checkout = () => {
   const [formData, setFormData] = useState({
@@ -30,7 +31,7 @@ const Checkout = () => {
     additionalMessage: '',
     couponCode: '',
   });
-  
+
   const cartItems = useSelector((state) => state.cart.items);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -44,10 +45,8 @@ const Checkout = () => {
 
   const handleCheckout = () => {
     setIsLoading(true);
-    // Simulate API call for checkout
     setTimeout(() => {
       setIsLoading(false);
-      // Redirect or show confirmation message
     }, 2000);
   };
 
@@ -56,7 +55,6 @@ const Checkout = () => {
   };
 
   const containerStyle = {
-    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed',
@@ -64,20 +62,21 @@ const Checkout = () => {
     borderRadius: '8px',
     boxShadow: '0 0 15px rgba(0, 0, 0, 0.2)',
     opacity: '0.9',
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
     width: '100%',  
-    minHeight: '100vh',  
-    // maxWidth: "100vw"
+    minHeight: '100vh', 
+    border: '2px solid black' 
   };
 
   return (
-    <div style={{ width: '100%', background: `url(${backgroundImage}) center center/cover no-repeat fixed`, marginBottom: '60px', marginTop: '70px' }}>
-      <Container className="my-4" style={{ maxWidth: '100%', padding: '0 15px' }}>
-        <Row className="mb-4">
-          <Col xs={12} md={8}>
-            <div style={containerStyle}>
-              <h1 style={{ fontFamily: 'serif' }}>Booking Details:</h1>
-              <Form>
+    <Container className='checkout-container' style={{ minWidth: '100vw' }}>
+      <div style={{ width: '100%', marginBottom: '60px', marginTop: '70px' }}>
+        <Container fluid className="my-4" style={{ maxWidth: '100%', padding: '0 15px' }}>
+          <Row className="mb-4">
+            <Col xs={12} md={8}>
+              <div style={containerStyle}>
+                <h1 style={{ fontFamily: 'serif' }}>Booking Details:</h1>
+                <Form>
                 <Row>
                   <Col md={6}>
                     <Form.Group controlId="formName">
@@ -343,30 +342,42 @@ const Checkout = () => {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Button variant="dark" onClick={handleCheckout} disabled={isLoading}>
-                  {isLoading ? 'Processing...' : 'Place Order'}
-                </Button>
-              </Form>
-            </div>
-          </Col>
-          <Col xs={12} md={4}>
-            <Card className="mt-3" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', margin: '0 auto', maxWidth: '100%' }}>
-              <Card.Body>
-                <h5>Order Summary</h5>
-                <ul>
-                  {cartItems.map(item => (
-                    <li key={item.id}>
-                      {item.name} - {item.quantity} x {item.price} = ${(item.quantity * parseFloat(item.price.slice(1))).toFixed(2)}
-                    </li>
-                  ))}
-                </ul>
-                <h6>Total Amount: ${calculateTotal()}</h6>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+                  <Button variant="danger" onClick={handleCheckout} disabled={isLoading}>
+                    {isLoading ? 'Processing...' : 'Place Order'}
+                  </Button>
+                </Form>
+              </div>
+            </Col>
+            <Col xs={12} md={4}>
+              <Card className="mt-3" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', margin: '0 auto', maxWidth: '100%' }}>
+                <Card.Body>
+                  <h4>Order Summary</h4>
+                  <br/>
+                  <ul>
+                    {cartItems.map(item => (
+                      <li key={item.id}>
+                        {item.name} - {item.quantity} x {item.price} = ${(item.quantity * parseFloat(item.price.slice(1))).toFixed(2)}
+                      </li>
+                    ))}
+                  </ul>
+                  <h6>Total Amount: ${calculateTotal()}</h6>
+                  <br/>
+                  <br/>
+                  <Row className="mt-4">
+                    <Col xs={6} className="text-center">
+                      <img src={image1} alt="Image 1" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
+                    </Col>
+                    <Col xs={6} className="text-center">
+                      <img src={image2} alt="Image 2" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
+                    </Col>
+                  </Row>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </Container>
   );
 };
 

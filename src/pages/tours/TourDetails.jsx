@@ -42,7 +42,6 @@ const TourDetails = () => {
         <Card.Text className="tour-description">{tour.description}</Card.Text>
        
       </Card.Body>
-      {/* <div className="tour-overview" style={{ marginTop: '1rem' }}> */}
       <div className="tour-overview">
         <h3 className="tour-overview-heading">Quick Tour Overview</h3>
         <ul className="text-warning tour-plans">

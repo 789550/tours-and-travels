@@ -30,7 +30,8 @@ const Layout = () => {
               <h2 style={{ fontFamily: 'serif', color: 'white'}}>Contact Us</h2>
               <p>Have questions? Get in touch with us.</p>
               <div style={{padding: '20px'}}>
-                <Link to="/contact">
+                <Link to="/">
+                {/* <Link to="/contact"> */}
                   <Button variant="secondary">Follow Us</Button>
                 </Link>
               </div>

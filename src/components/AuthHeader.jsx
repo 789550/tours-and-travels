@@ -48,7 +48,7 @@ const AuthHeader = ({ logout }) => {
           </Nav>
           <Nav>
             <Link to="/dashboard" className={`nav-link email ${isActive('/dashboard')}`}>{user?.email}</Link>
-            <Button onClick={logout}>Logout</Button>
+            <Button variant= 'outline-light' onClick={logout}>Logout</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

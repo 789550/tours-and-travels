@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { login } from "../../reduxStore/authSlice";
 import { FcGoogle } from "react-icons/fc";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import loginImage from "../../assets/login1.jpg";
+import loginImage from "../../assets/login1.png";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -21,7 +21,7 @@ const Login = () => {
     };
 
     return (
-        <div className="login-container" style={{ margin: 'auto', marginTop: '2rem', maxWidth: '100%', padding: '1rem' }}>
+        <div className="login-container" style={{ margin: 'auto', marginTop: '2rem', minWidth: '100vw', padding: '1rem', marginLeft: '50px' }}>
             <Row className="justify-content-center">
                 <Col xs={12} md={6}>
                     <h2>Login</h2>

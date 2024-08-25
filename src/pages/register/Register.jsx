@@ -4,7 +4,7 @@ import { Link, Navigate } from "react-router-dom";
 import { register } from "../../reduxStore/authSlice";
 import { connect } from "react-redux";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import registerImage from "../../assets/register.jpg";
+import registerImage from "../../assets/register.png";
 
 class Register extends React.Component {
     constructor(props) {
@@ -24,7 +24,7 @@ class Register extends React.Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault(); // Prevent default form submission
+        e.preventDefault(); 
         const newUser = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
@@ -43,7 +43,7 @@ class Register extends React.Component {
 
     render() {
         return (
-            <div className="register-container" style={{ margin: 'auto', marginTop: '2rem', maxWidth: '100%', padding: '1rem' }}>
+            <div className="register-container" style={{ margin: 'auto', marginTop: '2rem', minWidth: '100vw', padding: '1rem', marginLeft: '50px' }}>
                 {this.props.user && <Navigate to="/login" />}
                 <Row className="justify-content-center">
                     <Col xs={12} md={6}>
