@@ -8,6 +8,7 @@ body {
   align-items: center;
   height: auto !important;
   padding-top: 56px;
+  width: 100vw;
 }
 
 .nav-link {

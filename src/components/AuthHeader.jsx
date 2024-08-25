@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import logo from '../assets/wanderlust.png'; 
+import logo from '../assets/wanderlust2.png'; 
 
 const AuthHeader = ({ logout }) => {
   const user = useSelector(state => state.auth.user);
