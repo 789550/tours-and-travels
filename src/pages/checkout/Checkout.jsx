@@ -3,6 +3,7 @@ import { Container, Form, Button, Card, Row, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import image1 from '../../assets/order1.png'; 
 import image2 from '../../assets/order2.png'; 
+import backgroundImage from '../../assets/checkout4.jpg';
 
 const Checkout = () => {
   const [formData, setFormData] = useState({
@@ -55,6 +56,7 @@ const Checkout = () => {
   };
 
   const containerStyle = {
+    backgroundImage: `url(${backgroundImage})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundAttachment: 'fixed',
@@ -62,15 +64,14 @@ const Checkout = () => {
     borderRadius: '8px',
     boxShadow: '0 0 15px rgba(0, 0, 0, 0.2)',
     opacity: '0.9',
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
     width: '100%',  
     minHeight: '100vh', 
-    border: '2px solid black' 
   };
 
   return (
     <Container className='checkout-container' style={{ minWidth: '100vw' }}>
-      <div style={{ width: '100%', marginBottom: '60px', marginTop: '70px' }}>
+      <div style={{ width: '100%', background: `url(${backgroundImage}) center center/cover no-repeat fixed` ,marginBottom: '60px', marginTop: '70px' }}>
         <Container fluid className="my-4" style={{ maxWidth: '100%', padding: '0 15px' }}>
           <Row className="mb-4">
             <Col xs={12} md={8}>

@@ -416,7 +416,7 @@ body {
 } 
 
 .checkout-container{
-  background-color: #464444;
+  /* background-color: #464444; */
   margin-top: -48px;
   margin-bottom: -40px;
 }
@@ -441,6 +441,7 @@ body {
 .about-heading {
   font-size: 3rem;
   color: #333;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .about-caption {

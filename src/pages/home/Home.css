@@ -32,6 +32,7 @@
 .home-testimonials {
     padding: 50px 0;
     text-align: center;
+    min-width: 100vw;
 }
 
 .home-services h2,
