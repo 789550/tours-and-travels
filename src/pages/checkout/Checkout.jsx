@@ -363,7 +363,6 @@ const Checkout = () => {
                   </ul>
                   <h6>Total Amount: ${calculateTotal()}</h6>
                   <br/>
-                  <br/>
                   <Row className="mt-4">
                     <Col xs={6} className="text-center">
                       <img src={image1} alt="Image 1" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />

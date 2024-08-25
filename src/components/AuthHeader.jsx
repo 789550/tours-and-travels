@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar, Button, Badge } from "react-bootstrap";
+import { Container, Nav, Navbar, Button, Badge, Dropdown } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,7 +20,7 @@ const AuthHeader = ({ logout }) => {
     <Navbar collapseOnSelect expand="lg" className="navbar navbar-dark fixed-top bg-dark">
       <Container fluid>
         <Navbar.Brand href="#home" style={{ fontFamily: 'serif' }}>
-        <img
+          <img
             src={logo}
             alt="Logo"
             width="60"
@@ -29,7 +29,7 @@ const AuthHeader = ({ logout }) => {
             style={{ marginRight: '10px' }} 
           />
           Wanderlust
-          </Navbar.Brand>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto">
@@ -47,8 +47,17 @@ const AuthHeader = ({ logout }) => {
             </Link>
           </Nav>
           <Nav>
-            <Link to="/dashboard" className={`nav-link email ${isActive('/dashboard')}`}>{user?.email}</Link>
-            <Button variant= 'outline-light' onClick={logout}>Logout</Button>
+            <Dropdown align="end">
+              <Dropdown.Toggle variant="outline-light" id="dropdown-basic">
+                {user?.email}
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item as={Link} to="/dashboard">Dashboard</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/checkout">Orders</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            <Button variant='outline-light' onClick={logout} style={{ marginLeft: '10px' }}>Logout</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

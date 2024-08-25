@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Button, Card, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FaMountain, FaUmbrellaBeach, FaLandmark, FaBus } from 'react-icons/fa'; 
+import { FaMountain, FaUmbrellaBeach, FaLandmark, FaBus } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 import './Home.css';
 import germany from "../../assets/germany.jpeg";
 import london from "../../assets/London.webp";
@@ -12,6 +14,7 @@ import home3 from "../../assets/home3.jpg";
 import cityPhoto from "../../assets/home4.jpg";
 import naturePhoto from "../../assets/home5.jpg";
 import luxuryPhoto from "../../assets/home6.jpg";
+import { Image } from 'react-bootstrap';
 
 const Home = () => {
   return (
@@ -157,7 +160,6 @@ const Home = () => {
 
         </Container>
       </section>
-
       <section className="home-testimonials">
         <Container>
           <Row>
@@ -169,24 +171,54 @@ const Home = () => {
             <Col md={4}>
               <Card>
                 <Card.Body className="bg-dark text-warning">
-                  <Card.Text>"Amazing experience! Highly recommended."</Card.Text>
-                  <Card.Footer>John Doe</Card.Footer>
+                  <Card.Text>"Amazing experience! Highly recommended. I was impressed with how quickly i got a response to my inquiry. Their recommendations were spot-on, making my trip incredibly memorable.</Card.Text>
+                  <FontAwesomeIcon icon={faQuoteRight} />
+                  <Card.Footer>
+                    <Image
+                      src="https://westernfinance.org/wp-content/uploads/speaker-3-v2.jpg"
+                      roundedCircle
+                      style={{ width: '80px', height: '80px' }}
+                      className="mb-2"
+                    />
+                    <br/>
+                    John Doe
+                  </Card.Footer>
                 </Card.Body>
               </Card>
             </Col>
             <Col md={4}>
               <Card>
                 <Card.Body className="bg-dark text-warning">
-                  <Card.Text>"A truly unforgettable journey. Will travel again."</Card.Text>
-                  <Card.Footer>Jane Smith</Card.Footer>
+                  <Card.Text>"A truly unforgettable journey. Will travel again. Wanderlust made planning my vacation effortless. Their suggestions were fantastic, and the attention to detail was remarkable.</Card.Text>
+                  <FontAwesomeIcon icon={faQuoteRight} />
+                  <Card.Footer>
+                    <Image
+                      src="https://salondesmaires-gard.com/wp-content/uploads/2015/04/speaker-1-v2.jpg"
+                      roundedCircle
+                      style={{ width: '80px', height: '80px' }}
+                      className="mb-2"
+                    />
+                    <br/>
+                    Jane Smith
+                  </Card.Footer>
                 </Card.Body>
               </Card>
             </Col>
             <Col md={4}>
               <Card>
                 <Card.Body className="bg-dark text-warning">
-                  <Card.Text>"Great service and beautiful destinations."</Card.Text>
-                  <Card.Footer>Emily Johnson</Card.Footer>
+                  <Card.Text>"Great service and beautiful destinations.It was a great experience overall. They were friendly and knowledgeable, and they really went above and beyond to ensure everything was perfect.</Card.Text>
+                  <FontAwesomeIcon icon={faQuoteRight} />
+                  <Card.Footer>
+                    <Image
+                      src="https://salondesmaires-gard.com/wp-content/uploads/2014/10/speaker-2-v2.jpg"
+                      roundedCircle
+                      style={{ width: '80px', height: '80px' }}
+                      className="mb-2"
+                    />
+                    <br/>
+                    Emily Johnson
+                  </Card.Footer>
                 </Card.Body>
               </Card>
             </Col>

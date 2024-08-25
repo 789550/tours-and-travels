@@ -94,9 +94,9 @@ const Dashboard = () => {
     <div style={backgroundStyle}>
       <Card style={cardStyle} className="p-4 mb-4">
         <Card.Body>
-          <h1 className="text-primary">
-            Dashboard: <span style={{ fontSize: '22px' }}>{user?.email}</span>
-          </h1>
+          <h2 className="text-primary">
+            User's Details: <span style={{ fontSize: '22px' }}>{user?.email}</span>
+          </h2>
         </Card.Body>
       </Card>
 
