@@ -48,6 +48,7 @@ import kyoto3 from "../assets/kyoto3.jpg";
 import kyoto4 from "../assets/kyoto4.jpg";
 import kyoto5 from "../assets/kyoto5.jpg";
 import kyoto6 from "../assets/kyoto6.jpg";
+import kyoto7 from "../assets/kyoto7.jpg";
 import thor1 from "../assets/thor1.jpg";
 import thor2 from "../assets/thor2.jpg";
 import thor3 from "../assets/thor3.jpg";
@@ -232,7 +233,7 @@ const tours = [
     id: 8,
     name: "Kyoto, Japan",
     description: "Why go to Kyoto and what Kyoto cultural diversity can offer us, with which the traditional and modern world intertwine. Cultural attractions, uji tea and the art of acting combine to make the city's unique character a unique experience for every traveller to Japan.Kyoto Tower is the first activity to see.",
-    images: [kyoto1, kyoto2, kyoto3, kyoto4, kyoto5, kyoto6],
+    images: [kyoto1, kyoto2, kyoto3, kyoto4, kyoto5, kyoto6, kyoto7],
     tourPlan: [
       { day: 1, activities: "Arrival in Kyoto. Check into accommodation and explore the neighborhood around your hotel or guesthouse" },
       { day: 2, activities: "Visit Kinkaku-ji (Golden Pavilion) and Ryoan-ji Temple in the morning. In the afternoon, explore Arashiyama Bamboo Grove and Tenryu-ji Temple." },
