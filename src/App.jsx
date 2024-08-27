@@ -18,7 +18,7 @@ function App() {
   const Cart = lazy(() => import("./pages/cart/Cart"));
   const Checkout = lazy(() => import("./pages/checkout/Checkout"));
   return (
-    <div className="app-container mt-3" style={{minWidth: "100vw"}}>
+    <div className="app-container mt-3">
       <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Layout />}>

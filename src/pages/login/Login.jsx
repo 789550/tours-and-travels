@@ -21,7 +21,7 @@ const Login = () => {
     };
 
     return (
-        <div className="login-container" style={{ margin: 'auto', marginTop: '2rem', minWidth: '100vw', padding: '1rem', marginLeft: '50px' }}>
+        <div className="login-container" style={{ margin: 'auto', marginTop: '2rem', padding: '1rem', marginLeft: '50px' }}>
             <Row className="justify-content-center">
                 <Col xs={12} md={6}>
                     <h2>Login</h2>
