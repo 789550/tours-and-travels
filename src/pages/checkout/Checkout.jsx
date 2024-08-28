@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Card, Row, Col } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-import image1 from '../../assets/order1.png'; 
-import image2 from '../../assets/order2.png'; 
 import backgroundImage from '../../assets/checkout4.jpg';
 
 const Checkout = () => {
@@ -363,14 +361,6 @@ const Checkout = () => {
                   </ul>
                   <h6>Total Amount: ${calculateTotal()}</h6>
                   <br/>
-                  <Row className="mt-4">
-                    <Col xs={6} className="text-center">
-                      <img src={image1} alt="Image 1" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
-                    </Col>
-                    <Col xs={6} className="text-center">
-                      <img src={image2} alt="Image 2" style={{ width: '100%', maxWidth: '150px', height: 'auto' }} />
-                    </Col>
-                  </Row>
                 </Card.Body>
               </Card>
             </Col>
